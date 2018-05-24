@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+node_modules
+.deploy_git
+public
+db.json
+

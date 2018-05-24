@@ -1,0 +1,34 @@
+---
+layout: post
+title: Azkaban
+tags: Azkaban
+published: true
+---
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Azkaban 소개</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<ul class="org-ul">
+<li>하둡 잡들의 스케줄링을 위해 넷플릭스에서 만든 잡 스케쥴러.</li>
+<li>기본적인 동작은 잘 하는 상황이고 github의 상황을 보면 이슈들은 꾸준히 올라오는데 활동이 저조한 편이다. 이점 참고가 필요하다.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">설정하기</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+</div><div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">http 적용하기</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<p>
+디폴트로 https를 적용하게 되어 있는데, https는 인증서 문제도 있고 http를 적용하는 방법이 언급되어 있지 않은것 같아서 정리. azkaban-web-xxx/conf/azkaban.properties 에서 `jetty.use.ssl=false` 라고 선언해 주면 된다. 그러면 jetty.port에 명시되어 있는 포트로 http 서버가 실행된다.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-xml">jetty.use.ssl=false
+</pre>
+</div>
+</div>
+</div>
+</div>
