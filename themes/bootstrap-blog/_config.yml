@@ -1,0 +1,33 @@
+# Header
+navbar_brand: false
+menu:
+  Home: index.html
+  Archives: archives/
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: false
+
+# Sidebar
+widgets:
+- about         # See also: `about_content`
+- category
+- tagcloud
+- archive
+- recent_posts
+about_widget_content: >
+  <p>to be filled </p>
+
+# widget behavior
+archive_type: 'monthly'
+show_count: true
+
+# Miscellaneous
+google_analytics: UA-63706532-1
+
+favicon:
+twitter_id: darrenha
+google_plus:
+fb_admins:
+fb_app_id:
