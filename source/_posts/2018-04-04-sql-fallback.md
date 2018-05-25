@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "implement fallback in sql script"
-tags: mysql sql fallback
-published: true
+tags:
+- sql
 ---
 
 안드로이드에서 설정된 로케일이 en-US 일때 리소스를 찾는 순서는 en-US -> en -> default 이런식의 [fallback logic](https://developer.android.com/guide/topics/resources/multilingual-support.html) 이 있다. 그래서 최대한 specific 한 리소스를 먼저 보여주고 없으면 그다음 그다음 후보를 찾아서 표시해주는 식이 된다. 이런 fallback logic은 비교적 잘 알려져 있고, 다국어 표기시에 많이 쓰이는 방식이다.
@@ -13,9 +12,9 @@ published: true
 
 스키마는 단순화하여 아래처럼 정의 하고..
 
-![schema]({{site.url}}/assets/fallback-erd.png)
+![schema](/images/fallback-erd.png)
 
-[sql 스크립트]({{site.url}}assets/fallback.sql) 도 첨부.
+[sql 스크립트](/assets/fallback.sql) 도 첨부.
 
 
 ## test data

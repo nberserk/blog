@@ -42,11 +42,11 @@ PUT twitter
 
 위에서 들어온 데이터를 Kibana로 visualize해주면 되는데 kibana의 직관적인 UI가 훌륭하다. 리프레쉬 간격도 설정 가능하고 시간간격도 자동으로 조절해준다. 그래프 수준은 훌륭하고 손쉽게 다양한 옵션으로 그래프를 그릴수 있다.
 
-![kibana time line]( {{site.url}}/assets/kibana-time.png)
+![kibana time line]( /images/kibana-time.png)
 
 전체적인 흐름은 Management 에서 index설정을 하고, Discover에서 실험을 한후, visualize에서 시각화 설정을 해주고, dashboard에서 시각화한 요소들을 조합해서 한번에 볼수 있게 해주면 된다. 아래는 visual builder로 2개의 값을 비교해서 시간 축으로 나타낸 것이다.
 
-![kibana time line]( {{site.url}}/assets/kibana-visualbuilder.png)
+![kibana time line]( /images/kibana-visualbuilder.png)
 
 
 ## query string
