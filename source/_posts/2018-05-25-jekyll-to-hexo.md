@@ -21,7 +21,7 @@ asset들은  `jekyll/assets/`하위 파일들을 `hexo/source/images/`로 복사
 레이아웃은 jekyll과 비슷한 템플릿 방식으로 되어 있어서 비교적 기계적으로 적용하면 된다. 나의 경우는 disqus comment를 적용했다. root의 _config.yml에 `disqus_shortname`을 선언하여 변수를 채워준 다음 `layout/_partial/article.ejs`의 끝에 아래 내용을 채워주면 된다.
 
 ```js
-<% if (!index && page.comments && config.disqus_shortname){ %>
+<% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">

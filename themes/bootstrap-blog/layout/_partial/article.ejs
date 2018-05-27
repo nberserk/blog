@@ -32,7 +32,7 @@
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
-      <% if (!index && page.comments && config.disqus_shortname){ %>
+      <% if (!index && post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
@@ -45,7 +45,7 @@
   <% } %>
 </article>
 
-<% if (!index && page.comments && config.disqus_shortname){ %>
+<% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
