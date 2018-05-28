@@ -7,7 +7,7 @@ title: Inertia
 subtitle: life log
 description: site.desc
 keywords:
-author: Darren Ha
+author: "@nberserk"
 language: ko
 timezone: Asia/Seoul
 
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: bootstrap-blog
+theme: bootstrap
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,5 +82,4 @@ deploy:
   type: git
   repo: git@github.com:nberserk/nberserk.github.io.git
 
-# comments
 disqus_shortname: nberserk
