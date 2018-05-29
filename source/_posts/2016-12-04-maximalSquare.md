@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "maximal square"
-tags: dp
-category: algorithm
+tags: algorithm
 ---
 
 

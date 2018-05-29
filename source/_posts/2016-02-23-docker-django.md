@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  docker로 django개발 환경 만들기
-tags: docker django
+tags: docker
 ---
 
 docker 공홈에 있는 [django + postgres 의 예제](https://docs.docker.com/compose/django/)를 django + mysql로 바꾸어서 해보았다.
@@ -9,7 +9,7 @@ docker 공홈에 있는 [django + postgres 의 예제](https://docs.docker.com/c
 ## mysql
 
 docker repository [mysql로 검색](https://hub.docker.com/_/mysql/)을 해보면 여러가지가 나오는데 mysql:5.7로 해보자.
-아래처럼 실행하면 3306 포트로 mysql 데몬이 뜬다. 
+아래처럼 실행하면 3306 포트로 mysql 데몬이 뜬다.
 `docker run -e MYSQL_ROOT_PASSWORD=root mysql:5.7`
 
 
@@ -83,7 +83,7 @@ web:
 
 `docker-compose up` 명령을 내리면 두개의 docker 컨테이너를 동시에 실행할 수 있다.
 
-잘 동작하는지 확인하려면 http://localhost:8000 포트로 접속해보면 된다. 맥이나 윈도우즈의 경우는 `docker-machine ip` 명령으로 나오는 ip의 8000 로트로 접속해보면 장고 초기화면이 나온다. 나의 경우는 http://192.168.99.100:8000/ 이었다. 
+잘 동작하는지 확인하려면 http://localhost:8000 포트로 접속해보면 된다. 맥이나 윈도우즈의 경우는 `docker-machine ip` 명령으로 나오는 ip의 8000 로트로 접속해보면 장고 초기화면이 나온다. 나의 경우는 http://192.168.99.100:8000/ 이었다.
 
 
 ### revision history

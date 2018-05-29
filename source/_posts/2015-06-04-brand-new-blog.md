@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Jekyll + github = brand new blog"
-tags: jekyll github blog
+tags:
+ - jekyll
 ---
 
 

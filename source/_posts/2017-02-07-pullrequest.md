@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "pull request"
-tags: github pr
-published: false
+tags: github
 ---
 
 github 사용할때 내가 반영한 변경사항을 업스트림으로 보내고 싶을때, 이런 동작을 pull request, 즉 PR 이라고 한다. PR시 유용한 것들을 정리해 본다.

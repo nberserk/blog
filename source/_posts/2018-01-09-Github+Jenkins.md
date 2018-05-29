@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Github + Jenkins"
-tags: spring
+tags: jenkins
 published: true
 ---
 

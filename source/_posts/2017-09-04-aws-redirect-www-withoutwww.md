@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "redirecting www.domain to domain"
-tags: aws s3 route53
+tags: aws
 published: true
 ---
 

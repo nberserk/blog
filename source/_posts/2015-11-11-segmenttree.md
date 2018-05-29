@@ -1,8 +1,7 @@
 ---
 layout: post
 title: segment tree
-tags: algorithm tree segment
-published: true
+tags: algorithm
 ---
 
 
@@ -26,8 +25,8 @@ N개의 배열에서 특정 range(start, end)의 구간합을 구한다고 생�
 
 ## idea
 
-heap이랑 구조가 비슷하다. root는 모든 범위의 합을 가지고 있고(0 to N-1), left node는 왼쪽 반, right node는 오른쪽 반을 가지게 계속 나누어서 트리를 구성하면 된다. 각 노드는 자신의 범위를 가지고 그 범위의 구간합을 계산하여 가진다. left와 right의 값이 같아질때까지 이것을 반복하면 segment tree가 완성되게 된다. 
-예를 들어, 4개의 원소가 있는 구간트리를 도식화해 보면 아래처럼 구성 되게 된다. 
+heap이랑 구조가 비슷하다. root는 모든 범위의 합을 가지고 있고(0 to N-1), left node는 왼쪽 반, right node는 오른쪽 반을 가지게 계속 나누어서 트리를 구성하면 된다. 각 노드는 자신의 범위를 가지고 그 범위의 구간합을 계산하여 가진다. left와 right의 값이 같아질때까지 이것을 반복하면 segment tree가 완성되게 된다.
+예를 들어, 4개의 원소가 있는 구간트리를 도식화해 보면 아래처럼 구성 되게 된다.
 
 
 
@@ -45,21 +44,21 @@ heap이랑 구조가 비슷하다. root는 모든 범위의 합을 가지고 있
 
 ## implementation
 
-기본적으로 [start, end] 구간의 중간을 잡아서 왼쪽,오른쪽을 계속 recursive하게 수행하면 된다. 종료 조건은 start와 end가 같을때이다. 그리고 left child의 인덱스는 2*i+1이 되고, 오른쪽 차일드의 인덱스는 2*i+2가 된다. 
-그리고 트리의 길이는 원 배열 길이의 4배 정도를 잡아주면 된다. 
+기본적으로 [start, end] 구간의 중간을 잡아서 왼쪽,오른쪽을 계속 recursive하게 수행하면 된다. 종료 조건은 start와 end가 같을때이다. 그리고 left child의 인덱스는 2*i+1이 되고, 오른쪽 차일드의 인덱스는 2*i+2가 된다.
+그리고 트리의 길이는 원 배열 길이의 4배 정도를 잡아주면 된다.
 
 
 #### build
 
-위 전제조건으로 구현해 보면 아래처럼 포현할 수 있다. 
+위 전제조건으로 구현해 보면 아래처럼 포현할 수 있다.
 
 
 ```java
 /**
  a: input array
 tree: segment tree
- i: index of segment tree  
- */ 
+ i: index of segment tree
+ */
 int build(int* a, int* tree, int start, int end, int i){
     if (start==end){
         tree[i] = a[start];
@@ -111,12 +110,12 @@ void update2(int*st, int dest, int diff, int s,int e, int i){
     if (dest<s || dest>e) return;
 
     st[i] += diff;
-    if (s==e){    
+    if (s==e){
         return;
     }
     int m = (e-s)/2;
     update2(st, dest, diff, s, m, 2*i+1);
-    update2(st, dest, diff, m+1, e, 2*i+2);    
+    update2(st, dest, diff, m+1, e, 2*i+2);
 }
 ```
 

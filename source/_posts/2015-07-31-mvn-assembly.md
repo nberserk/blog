@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "maven assembly plugin으로 패키징 해서 배포하기"
-tags: maven mvn assembly
+tags: maven
 ---
 
-메이븐으로 프로젝트를 진행하다가 이 것을 배포해야 할때 configuration 파일들이나 헬퍼 스크립트 등을 디렉토리로 구성해서 zip/tar.gz으로 배포해야 할 필요가 있다. 그런것을 메이븐 상에서 가능하게 해주는 것이 maven assembly plugin 이다. 
+메이븐으로 프로젝트를 진행하다가 이 것을 배포해야 할때 configuration 파일들이나 헬퍼 스크립트 등을 디렉토리로 구성해서 zip/tar.gz으로 배포해야 할 필요가 있다. 그런것을 메이븐 상에서 가능하게 해주는 것이 maven assembly plugin 이다.
 
 
 ## mvn configuration
@@ -37,7 +37,7 @@ tags: maven mvn assembly
 
 ## assembly descriptor
 
-moduleSet은 메이븐 모듈의 관점에서 처리를 하는 것이고. 소스, 바이너리등의 처리를 할 수 있다. 아래처럼 하면 소스들을 archive로 카피해 준다. 
+moduleSet은 메이븐 모듈의 관점에서 처리를 하는 것이고. 소스, 바이너리등의 처리를 할 수 있다. 아래처럼 하면 소스들을 archive로 카피해 준다.
 
 ```xml
 <moduleSet>
@@ -48,12 +48,12 @@ moduleSet은 메이븐 모듈의 관점에서 처리를 하는 것이고. 소스
   <sources>
     <outputDirectoryMapping>
       ${module.basedir.name}
-    </outputDirectoryMapping>    
+    </outputDirectoryMapping>
   </sources>
 </moduleSet>
 ```
 
-반면 dependencySet은 각 모듈의 산출물과 디펜던시를 가지는 것의 산출물들을 어떻게 가져 올것 인지에 대해서 기술한다. 
+반면 dependencySet은 각 모듈의 산출물과 디펜던시를 가지는 것의 산출물들을 어떻게 가져 올것 인지에 대해서 기술한다.
 
 ```xml
 <dependencySet>
@@ -65,7 +65,7 @@ moduleSet은 메이븐 모듈의 관점에서 처리를 하는 것이고. 소스
   <outputDirectory>lib</outputDirectory>
   <excludes>
     <exclude>com.nberserk:core</exclude> <!--core가 refer하는 모든 jar들을 lib으로 카피-->
-  </excludes>  
+  </excludes>
 </dependencySet>
 ```
 

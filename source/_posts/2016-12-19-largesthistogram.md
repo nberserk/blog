@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "largest rectangle in histogram"
-category: algorithm
+tags: algorithm
 ---
 
 
 
 > Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
-> 
+>
 Given heights = [2,1,5,6,2,3],
 return 10.
 
@@ -35,7 +35,7 @@ i | stack | desc |
 6 | 1 | stack pop, poped=4, n\[4]=2, 2의 right=6, left=1, width=6-1-1=4. localMax=2*4=8 |
 6 |  | stack pop, poped=1, n\[1]=1, 1의 right=6, left=-1, width=6-(-1)-1. localMax=1*6=6 |
 
-따라서 largest area는 10이 된다. 
+따라서 largest area는 10이 된다.
 
 ## implementation
 
@@ -43,7 +43,7 @@ i | stack | desc |
 int largestRectangleArea(int[] heights) {
     int max = Integer.MIN_VALUE;
     Stack<Integer> stack = new Stack<>();
-    for(int i=0;i<=N;i++){ // interate until N, 
+    for(int i=0;i<=N;i++){ // interate until N,
         int h = i==N?0:heights[i];
         if(stack.isEmpty() || h >= heights[stack.peek()])
             stack.push(i);

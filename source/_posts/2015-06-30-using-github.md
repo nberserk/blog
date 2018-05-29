@@ -1,10 +1,26 @@
 ---
 layout: post
-title:  "github tips"
-tags: github git upstream
+title:  "git tips"
+tags:
+ - git
 ---
 
-github 모르면 간첩.
+git/github 모르면 간첩.
+
+## useful git config
+
+`.git/config`
+```
+[alias]
+    push-for-gerrit = push origin HEAD:refs/for/master
+    unpushed = log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+```
+ 아래처럼 cli로 적용을 해도 된다.
+ > git config (--global) alias.lg log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+ - lg 는 git log를 informative하게 보여주고
+ - unpushed는 push되지 않은 브랜치들을 보여준다.
 
 ## fork 된 저장소 upstream으로 부터 업데이트 하기
 

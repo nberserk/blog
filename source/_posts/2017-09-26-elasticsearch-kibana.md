@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "elastic search and kibana"
-tags: elasticsearch kibana
-published: true
+tags:
+ - elasticsearch
+ - kibana
 ---
 
 [ELK 스택](https://www.elastic.co/webinars/introduction-elk-stack)으로 많이 알려져있고, Elastic search(이하 ES) + LogStash + Kibana 의 조합으로 많이 사용한다. ES는 document DB이고, logStash는 로그를 정제하여 ES에 전달하는 역할, Kibana는 로그들을 필터링 및 조합하여 visualization을 하는 역할을 한다. 특히 타임 series 데이터를 보여주는데 적합하고 멋들어지게 보여줄 수 있어 선호되고 있다.

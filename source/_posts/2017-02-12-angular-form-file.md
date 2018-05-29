@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Angular2 file upload"
-tags: angular2 form
+tags: angular
 ---
 
 요즘 한창 Django 와 Angular2를 사용해서 웹사이트를 만들고 있다. 헌데 angular2에서 여러개의 file upload하는 방법이 정확하게 나와 있지 않아서 여기에 정리해 본다.

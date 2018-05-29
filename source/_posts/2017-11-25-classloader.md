@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "java classloader"
-tags: classloader
+tags: java
 published: true
 ---
 
-java가 어떻게 필요한 class 들을 로드하는지 한번쯤은 궁금해 했을 법한 내용인데 이제서야 정리해 본다. 
+java가 어떻게 필요한 class 들을 로드하는지 한번쯤은 궁금해 했을 법한 내용인데 이제서야 정리해 본다.
 
 ## class loader internal
 
@@ -20,7 +20,7 @@ java가 어떻게 필요한 class 들을 로드하는지 한번쯤은 궁금해 
 
 예들 들어보면, [java tomcat](http://tomcat.apache.org/tomcat-7.0-doc/class-loader-howto.html)을 보면 될것 같다. tomcat은 여러개의 war를 서빙할 수 있는데, 각 war는 같은 클래스를 가질 수 있다. 그렇게 되면 기존의 CL로는 로딩할 수 없는 한계가 있게 된다. 그래서 custom CL의 존재가 필요하게 되는 것이다.
 
-그리고 CL은 항상 parent CL을 넣어줘야만 생성할 수 있다. 따라서 CL은 트리처럼 hierarchy가 생기게 된다. 그 트리를 따라 내려가면서 클래스를 로드하게 된다. 루트 에서 먼저 찾아보고 없으면 그 자식 CL로 그 다음 자식.. 이런식이다. 이렇게 한 이유는 보안의 이유인데, custom CL가 standard Lib과 같은 클래스를 중복해서 정의하면 standard lib의 것이 아닌 다른 class가 로딩되게 할 수 있기 때문이다. 
+그리고 CL은 항상 parent CL을 넣어줘야만 생성할 수 있다. 따라서 CL은 트리처럼 hierarchy가 생기게 된다. 그 트리를 따라 내려가면서 클래스를 로드하게 된다. 루트 에서 먼저 찾아보고 없으면 그 자식 CL로 그 다음 자식.. 이런식이다. 이렇게 한 이유는 보안의 이유인데, custom CL가 standard Lib과 같은 클래스를 중복해서 정의하면 standard lib의 것이 아닌 다른 class가 로딩되게 할 수 있기 때문이다.
 
 ## reference
 

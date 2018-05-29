@@ -1,7 +1,8 @@
 ---
 layout: post
 title: ssh tunneling on AWS
-tags: ssh aws tunneling
+tags:
+ - ssh
 ---
 
 AWS EMR를 사용하다보면 보안등의 이유로 로컬로만 웹서비스등을 오픈해 놓았다. 그래서 web ui는 접속이 되더라도 제대로 동작하지 않다. YARN의 Resource Manager등도 개별 노드로 가는 노드들은 다 링크를 찾지 못한다. 각 링크들이 private ip로 되어 있기 때문이다. 제플린도 마찬가지로 웹은 뜨지만 제플린 서버로 접속을 하지 못해서 disconnted상태로 뜬다. 그래서 이럴땐 ssh tunneling을 사용하면 fully 접근하는 길이 열리게 된다.
@@ -27,8 +28,8 @@ Zeppelin을 예로 들어서 터널링을 해보자. Zeppelin의 경우 emr-4.1�
 
 ```
 ssh -i <your.pem>  -L 8890:localhost:8890  ec2-user@bastion
-```    
-    
+```
+
 이렇게 하면 bastion으로 ssh 접속이 되었을 것이고 다시 EMR master로 8890 포트를 포워딩 한다.
 
 
@@ -50,5 +51,5 @@ ssh 명령을 줄때 다음 옵션들을 경우에 맞게 사용하면 아주 �
 
 * 2015/10/30 initial draft
 
-        
+
 

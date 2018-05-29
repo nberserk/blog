@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "emacs helm"
-tags: emacs helm
+tags: emacs
 ---
 
 helm은 이맥스상에서 무엇인가를 선택할때(find-files, switch-buffer, recentf) 사용하는 프레임웍이다. 기존에는 ido-mode를 사용하고 있었는데 이번에 helm으로 바꾸면서 정리해 본다. 대부분의 내용은 레퍼런스에 있는 것을 번역한 수준임.

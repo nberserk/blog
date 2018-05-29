@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "hadoop 설치 및 설정"
-tags: hadoop hdfs yarn
+tags:
+ - hadoop
 ---
 
 ## 소개

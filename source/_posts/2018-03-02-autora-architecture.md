@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Aurora architecture"
-tags: architecture aws
+tags: aws
 published: true
 ---
 

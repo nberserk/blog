@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Hadoop cluster docker for ARM
-tags: hadoop arm docker
+tags: docker
 ---
 
 ARM architecture에 hadoop cluster docker image를 만들어 보았다.
@@ -9,7 +9,7 @@ ARM architecture에 hadoop cluster docker image를 만들어 보았다.
 docker hub의 armv7/armhf-ubuntu_core:15.10  이미지를 기반으로 Dockerize를 시도.
 
 크게 3개의 이미지를 만들 것
-- hadoop-base 
+- hadoop-base
 - hadoop-slave
 - hadoop-master
 
@@ -49,7 +49,7 @@ RUN apt-get update && apt-get install -y openjdk-7-jdk openssh-server openssh-cl
 
 ## passwordless ssh
 
-hadoop cluster를 구성하려면 cluster간 passwordless ssh가 구성이 되어야 한다. 그것을 위해서 
+hadoop cluster를 구성하려면 cluster간 passwordless ssh가 구성이 되어야 한다. 그것을 위해서
 
 ```
 # sshd setting
@@ -57,7 +57,7 @@ RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -P ''
 RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 ADD config /root/.ssh/
 RUN chmod 600 /root/.ssh/config
-#RUN chown root:root /root/.ssh/config  
+#RUN chown root:root /root/.ssh/config
 RUN echo 'root:sheepdog' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN echo "UsePAM no" >> /etc/ssh/sshd_config

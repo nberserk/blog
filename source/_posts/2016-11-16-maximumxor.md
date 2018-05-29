@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Maximum XOR"
-tags: xor
-category: algorithm
+tags: algorithm
 ---
 
 아래 문제를 보자
@@ -58,13 +57,13 @@ public int findMaximumXOR(int[] nums) {
         }
         return max;
     }
-    
+
 ```
 
 
 ## Problems
 
-- [Maximum XOR  @leetcode](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) 
+- [Maximum XOR  @leetcode](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
 
 
 
