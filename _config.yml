@@ -83,3 +83,9 @@ deploy:
   repo: git@github.com:nberserk/nberserk.github.io.git
 
 disqus_shortname: nberserk
+
+menu:
+  Home: index.html
+  Archives: archives/
+  Tags: /tags
+  About: /about
