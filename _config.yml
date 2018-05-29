@@ -89,3 +89,7 @@ menu:
   Archives: archives/
   Tags: /tags
   About: /about
+
+#sitemap
+sitemap:
+  path: sitemap.xml
