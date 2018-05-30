@@ -16,6 +16,8 @@ asset들은  `jekyll/assets/`하위 파일들을 `hexo/source/images/`로 복사
 
 > `![my image](/images/my-image.png)`
 
+
+
 ## disqus 커멘트 적용하기
 
 레이아웃은 jekyll과 비슷한 템플릿 방식으로 되어 있어서 비교적 기계적으로 적용하면 된다. 나의 경우는 disqus comment를 적용했다. root의 _config.yml에 `disqus_shortname`을 선언하여 변수를 채워준 다음 `layout/_partial/article.ejs`의 끝에 아래 내용을 채워주면 된다.
@@ -51,3 +53,8 @@ asset들은  `jekyll/assets/`하위 파일들을 `hexo/source/images/`로 복사
 1. tags page
 1. archive layout
 
+## 다른 포스트 링크 걸기
+
+아래처럼 바로 post에 링크를 걸 수 있다.
+
+> /YYYY/MM/DD/slug
