@@ -16,7 +16,7 @@ asset들은  `jekyll/assets/`하위 파일들을 `hexo/source/images/`로 복사
 
 > `![my image](/images/my-image.png)`
 
-## layout
+## disqus 커멘트 적용하기
 
 레이아웃은 jekyll과 비슷한 템플릿 방식으로 되어 있어서 비교적 기계적으로 적용하면 된다. 나의 경우는 disqus comment를 적용했다. root의 _config.yml에 `disqus_shortname`을 선언하여 변수를 채워준 다음 `layout/_partial/article.ejs`의 끝에 아래 내용을 채워주면 된다.
 
@@ -42,4 +42,12 @@ asset들은  `jekyll/assets/`하위 파일들을 `hexo/source/images/`로 복사
 
 ## theme
 
+개인적으로 css 깔끔하게 하는 것은 자신이 없어서 보통 css framework은 bootstrap을 사용한다. [bootstrap theme](https://github.com/cgmartin/hexo-theme-bootstrap-blog) 을 기반으로 나의 theme작업을 했고 [github에](https://github.com/nberserk/hexo-theme-bootstrap) 공개했다.
+
+데모는 http://nberserk.github.io에 가면 된다.
+
+기존의 theme에 내가 추가적으로 작업한 것은
+1. disqus comment
+1. tags page
+1. archive layout
 

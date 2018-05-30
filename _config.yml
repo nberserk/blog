@@ -93,3 +93,6 @@ menu:
 #sitemap
 sitemap:
   path: sitemap.xml
+
+feed:
+  type: atom
