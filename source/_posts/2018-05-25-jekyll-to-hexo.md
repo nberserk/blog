@@ -58,3 +58,8 @@ asset들은  `jekyll/assets/`하위 파일들을 `hexo/source/images/`로 복사
 아래처럼 바로 post에 링크를 걸 수 있다.
 
 > /YYYY/MM/DD/slug
+
+## redirect 
+
+jekyll이랑 permanent link 방식이 조금 달라서, 기존 disqus comment의 링크가 다 깨졌는데 이것을 workaround하기 위해서 [hexo-alias-generator](https://github.com/hexojs/hexo-generator-alias) 를 설치했다.
+
