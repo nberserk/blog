@@ -1,5 +1,5 @@
 ---
-title: angular-attribute-directive
+title: angular attribute directive
 date: 2018-06-12 19:20:43
 tags: angular
 ---
@@ -9,6 +9,7 @@ angular에서 3대 구성요소중 하나인 attribute directive에 대해서 �
 ## attribute directive
 
 highlight-directive.ts
+
 ```typescript
 import { Directive, ElementRef } from '@angular/core';
 
@@ -24,6 +25,7 @@ export class HighlightDirective {
 ```
 
 test.html
+
 ```html
 <p appHighlight highlightColor="yellow">Highlighted in yellow</p>
 ```
