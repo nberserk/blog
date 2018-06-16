@@ -1,7 +1,8 @@
 ---
-title: angular-form-validation
+title: angular form validation
 date: 2018-06-12 19:28:22
-tags: angular
+tags: 
+- angular
 ---
 
 앞서 기본적인 [angular form](/2018/06/12/angular-form) 에 대해서 알아봤는데, 이번에는 form validation에 대해서 알아보자.
@@ -14,8 +15,8 @@ angular에서 built-in validator의 종류는 다음과 같다.
 | name | attribute selector | desc |
 | ---- | --- | --- |
 | [RequiredValidator](https://angular.io/api/forms/RequiredValidator) | [required] | |
-| [MinLengthValidator](https://angular.io/api/forms/MinLengthValidator) | `[minlength]` |
-| [MaxLengthValidator](https://angular.io/api/forms/MaxLengthValidator) | `[maxlength]` |
+| [MinLengthValidator](https://angular.io/api/forms/MinLengthValidator) | [minlength] |
+| [MaxLengthValidator](https://angular.io/api/forms/MaxLengthValidator) | [maxlength] |
 | [PatternValidator](https://angular.io/api/forms/PatternValidator) | [pattern] | |
 
 기타로 EmailValidator, CheckboxRequiredValidator 등도 있다. 위의 Validator들은 아래처럼 selector로 directive가 적용되게 할 수 있다.
