@@ -22,9 +22,9 @@ tags: mybatis
 </trim>
  ```
 
-- trim은 2가지 일을 하는데
-  - trim안의 컨텐츠가 있으면 prefix를 붙여주고
-  - trim의 컨텐츠 앞에 AND나 OR가 붙으면 처음 것은 삭제한다.
+여기서 trim은 2가지 일을 하는데 trim안의 컨텐츠가 있으면 prefix를 붙여주고, trim안에 sql문에 `prefixOverrides`에 있는 단어가 있으면 삭제해준다. 여기서는 AND나 OR가 된다.
+마찬가지로 `suffixOverrides`는 끝에 붙는 단어를 삭제할 수 있다.
+-
 
 
  ## 하나의 mapper에 여러개의 sql문 사용하기
@@ -41,3 +41,12 @@ tags: mybatis
  이것을 하려면 JDBC URL에 `allowMultiQueries=true`를 사용하면 된다. 아래처럼.
 
  > db.url=jdbc:mysql://127.0.0.1:33/orderdb?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=UTC&allowMultiQueries=true
+
+## 로깅
+
+mybatis 쿼리가 제대로 동작안될때 Mapper안에 브레이크를 걸거나 할 수없기 때문에 디버깅이 어려워서 간단한 실수로 시간낭비를 하는 케이스가 꽤 있다.
+이럴때 로깅 옵션을 enable해서 보면 도움이 된다.
+
+logback 의 옵션은 아래처럼 mapper의 package name르 아래처럼 적어주면 된다. 아래는 logback의 설정..
+
+> <logger name="mapper.package.name" level="DEBUG"/>
