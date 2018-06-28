@@ -26,6 +26,7 @@ angular form에 관한 정리. 폼은 template based로 구성할 수도 있도,
 - `#heroForm` 과 `#form`은 [template reference variable](https://angular.io/guide/template-syntax#ref-vars) 임.
   - 기본적으로 `#form`은 dom reference-여기서는 `<form>`- 의 [ElementRef](https://angular.io/api/core/ElementRef) 가 연결됨.
   - heroForm에서 사용된 ngForm은 angular의 내장되어 있는 ngForm directive를 사용한 것임. 그래서 기존 dom에는 없는 `heroForm.form`을 사용할 수 있는 것임. 이것은 type은 [NgForm](https://angular.io/api/forms/NgForm)이 됨.
+  - typescript 에서는 `ViewChild('heroForm')`으로 reference 를 받아올수도 있음
 - template reference variable은 template 같은 템플릿 안에서 사용할 수 있음
 - `[(ngModel)]` 은 양방향 바인딩한다는 뜻으로 typescript에 있는 hero.name 변수에 양방향 바인딩 된다.
 

@@ -1,7 +1,7 @@
 ---
 title: angular form validation
 date: 2018-06-12 19:28:22
-tags: 
+tags:
 - angular
 ---
 
@@ -118,6 +118,17 @@ export class TelephoneNumberFormatValidatorDirective implements Validator {
 ```
 
 위 Validator를 적용하려면 앞서 예제와 같이 `<input>` tag에 validator의 selector인 `telephoneNumber`를 추가해주면 적용이 된다.
+
+## server validatoin
+
+위의 예제에서 progrmatically 에러를 추가하고 싶을때(서버단에서 에러가 났을때) 이렇게 하면 된다.
+
+우선 Form 변수를 `@ViewChild`로 매핑 시켜 주고, FormControl의 setErrors함수를 통해서 custom ValidationError를 Set할 수 있다.
+
+```typescript
+@ViewChild('heroForm') form: NgForm;
+this.form.controls['name'].setErrors({ server: { message: err.error.message } });
+```
 
 ## Reference
 
