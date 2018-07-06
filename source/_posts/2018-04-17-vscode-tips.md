@@ -9,6 +9,12 @@ visual studio code 팁들에 대해서 정리해 보자.
 
 ## shortcut
 
+keybindings.json
+```
+{ "key": "cmd+e",      "command": "workbench.action.quickOpen" },
+{ "key": "alt+shift+-","command": "undo",         "when": "textInputFocus && !editorReadonly" },
+```
+
 - navigate back, `ctrl -`
 - navigate forward, `ctrl shift -`
 
