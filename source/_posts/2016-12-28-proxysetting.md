@@ -62,6 +62,10 @@ proxy = <ip:port>
 
 이럴때 https 통신이 실패하지 않게 하려면 어떤 설정이 필요한지 각각의 경우에 대해서 정리해 봤다.
 
+### Mac 
+
+맥은 기본적으로 사설 인증서를 키체인에 등록하고 그 인증서를 `System Keychains`에 추가한다. 그 인증서를 선택하여 `always trust`로 해준다. 이렇게 하면 Chrome이나 curl등이 cert error를 내는것을 해결할 수 있다. 
+
 ### Java
 
 JDK가 설치된 폴더의 cacerts 파일에 keytool을 이용해서 추가해주면 된다. 아래처럼
