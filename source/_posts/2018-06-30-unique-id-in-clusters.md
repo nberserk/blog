@@ -1,7 +1,7 @@
 ---
 title: cluster wide unique ID
 date: 2018-06-30 16:24:03
-tags: archi
+tags: cloud architecture
 ---
 
 cluster 단위의 유닉한 ID를 만들려면 어떻게 해야 할까? 출처는 [여기](https://medium.com/@varuntayal/what-does-it-take-to-generate-cluster-wide-unique-ids-in-a-distributed-system-d505b9eaa46e)

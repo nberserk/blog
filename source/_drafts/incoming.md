@@ -9,14 +9,12 @@ http://blog.gainlo.co/index.php/2016/03/29/design-news-feed-system-part-1-system
 
 http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html
 
-[big data in realtime at Twitter](https://www.slideshare.net/nkallen/q-con-3770885)
+
 
 [Designing Instagram](https://www.educative.io/collection/page/5668639101419520/5649050225344512/5673385510043648)
 
-- data model
-  - follower, user, feed,
-- ranking
-- publishing
+
+
 
 # normalize/denormalize
 - OLTP(Online Transaction Processing) : normalize
