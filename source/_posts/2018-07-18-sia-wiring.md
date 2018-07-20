@@ -43,6 +43,26 @@ java config는 xml에 비해 powerful하고, type-safe하고 refactoring에 우�
 
 `@Configuration` annotation은 컴포넌트 스캐닝 대신에 explicit하게 빈들을 생성할 수 있게 해준다. 
 
+```java
+@Bean
+public CompactDisc sgtPeppers() {
+  return new SgtPeppers();
+}
+
+@Bean
+public CDPlayer cdPlayer() {
+  return new CDPlayer(sgtPeppers());
+}
+
+@Bean
+public CDPlayer anotherCDPlayer() {
+  return new CDPlayer(sgtPeppers());
+}
+```
+
+위의 예에서 원래의 자바 코드라면 sgtPeppers는 서로 다른 instance를 리턴하기때문에 cdPlayer와 anotherCDPlayer는 서로 다른 CompactDisc 인스턴트여야 하지만 실제로는 같은 인스턴스로 초기화 된다. @Bean때문에 behavior가 달라진 것이다.
+
+
 ## mixing java config and xml
 
 아래처럼 다른 configuration을 임포트할 수도 있고, xml config도 import 할 수도 있다.
