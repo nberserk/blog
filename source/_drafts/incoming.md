@@ -20,10 +20,27 @@ https://github.com/fishercoder1534/Leetcode
 # consistent hashing
 - http://highscalability.com/blog/2018/6/18/how-ably-efficiently-implemented-consistent-hashing.html
 
+Werner vogels interview : http://www.se-radio.net/2006/12/episode-40-interview-werner-vogels/
 
 
+# google search
 
-## 
+- indexing
+  - crawler : do not get into infinite loop by marking already crawled url
+  - indexer : bunch of Map/Reduce, analyze page make index
+    - weight incoming link
+    - give points to words according to the pos. words in title vs comment
+    - understanding context, `hash+table` -> CS `hash+brownies` -> cook
+- getting result
+  - each search word have corresponding index
+  - AND|OR op for each index
+  - sort by ranking
+
+## reference
+
+- [pagerank paper](http://infolab.stanford.edu/~backrub/google.html)
+- https://softwareengineering.stackexchange.com/questions/38324/how-would-you-implement-google-search
+
 
 # news feed system
 
