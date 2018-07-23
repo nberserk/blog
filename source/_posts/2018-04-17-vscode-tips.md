@@ -7,13 +7,25 @@ tags: vscode
 vscode를 사용하면서 항상 사용해오던 emacs 사용을 중단했다. 그만큼 맘에 드는 에디터 이기 때문이다. 
 visual studio code 팁들에 대해서 정리해 보자.
 
-## shortcut
+## shortcut customization
 
 keybindings.json
 
 ```
-{ "key": "cmd+e",      "command": "workbench.action.quickOpen" },
-{ "key": "alt+shift+-","command": "undo",         "when": "textInputFocus && !editorReadonly" },
+{ 
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpen" },
+{ 
+    "key": "alt+shift+-",
+    "command": "undo",         "when": "textInputFocus && !editorReadonly" },
+{
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack"
+},    
+{
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward"
+},
 ```
 
 ### multiple cursor
