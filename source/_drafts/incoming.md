@@ -18,6 +18,7 @@ https://github.com/fishercoder1534/Leetcode
   - 
 
 # consistent hashing
+- http://n00tc0d3r.blogspot.com/2013/09/big-data-consistent-hashing.html
 - http://highscalability.com/blog/2018/6/18/how-ably-efficiently-implemented-consistent-hashing.html
 
 Werner vogels interview : http://www.se-radio.net/2006/12/episode-40-interview-werner-vogels/
