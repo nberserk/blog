@@ -18,10 +18,20 @@ https://github.com/fishercoder1534/Leetcode
   - 
 
 # consistent hashing
+
+## 어디서 사용하고 있나
+Amazon dynamoDB, Chord - distribute hash table by MIT
+
+## how
+
+보통 hash는 `value%mod` 에 의해서 
+
 - http://n00tc0d3r.blogspot.com/2013/09/big-data-consistent-hashing.html
 - http://highscalability.com/blog/2018/6/18/how-ably-efficiently-implemented-consistent-hashing.html
+- [dynamo paper](http://s3.amazonaws.com/AllThingsDistributed/sosp/amazon-dynamo-sosp2007.pdf)
 
 Werner vogels interview : http://www.se-radio.net/2006/12/episode-40-interview-werner-vogels/
+
 
 
 # google search
