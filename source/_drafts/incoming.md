@@ -91,3 +91,13 @@ http://blog.lastmind.io/archives/684
 # simple garbage collector, mark and sweep
 
 http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/
+
+# nGrinder
+
+
+
+# post connection test
+
+> nc -z -w3 loadtest-sknowledgedb.cls9hmfha9jo.us-west-2.rds.amazonaws.com 3306
+
+
