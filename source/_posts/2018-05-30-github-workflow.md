@@ -66,3 +66,6 @@ topic 브랜치로 머지 한다.
 
 conflict나는 부분을 해결한후 커밋을 하고 PR review를 다시 요청하면 된다.
 
+# Reference
+
+- https://gist.github.com/Chaser324/ce0505fbed06b947d962
