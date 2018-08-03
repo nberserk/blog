@@ -24,6 +24,13 @@ cluster 단위의 유닉한 ID를 만들려면 어떻게 해야 할까? 출처�
 
 이 시스템의 capa 즉 [4096개가 넘는 요청이 들어오면 어떻게 하는가하고 찾아보니](https://charsyam.wordpress.com/2012/12/26/%EC%9E%85-%EA%B0%9C%EB%B0%9C-global-unique-object-id-%EC%83%9D%EC%84%B1-%EB%B0%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A0%95%EB%A6%AC/) 다음 밀리세컨드까지 기다린다고 한다. 이것을 잘 모니터링 하다가 다음 버전을 준비하면 될듯 하다.
 
-# references 
+# instagram shard id case
 
-- https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c
+[Instagram경우를 보면](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c) 아래처럼 data id를 정의해서 사용한다고 한다.
+
+Each of our IDs consists of:
+
+- 41 bits for time in milliseconds (gives us 41 years of IDs with a custom epoch)
+- 13 bits that represent the logical shard ID
+- 10 bits that represent an auto-incrementing sequence, modulus 1024. This means we can generate 1024 IDs, per shard, per millisecond
+
