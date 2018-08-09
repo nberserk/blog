@@ -8,8 +8,6 @@ tags: mybatis
 
  ## Dynamic SQL
 
- ### trim
-
  ```sql
  SELECT * FROM ORDER O
 <trim prefix="WHERE" prefixOverrides="AND|OR">
@@ -19,8 +17,14 @@ tags: mybatis
     <if test="price != null">
         AND O.price = #{price}
     </if>
+    <if test="searchText != null">
+        AND pattern like CONCAT('%',#{searchText},'%')
+    </if>
 </trim>
  ```
+
+ - concat example
+ - conditional query with trim and if
 
 여기서 trim은 2가지 일을 하는데 trim안의 컨텐츠가 있으면 prefix를 붙여주고, trim안에 sql문에 `prefixOverrides`에 있는 단어가 있으면 삭제해준다. 여기서는 AND나 OR가 된다.
 마찬가지로 `suffixOverrides`는 끝에 붙는 단어를 삭제할 수 있다.
@@ -47,6 +51,6 @@ tags: mybatis
 mybatis 쿼리가 제대로 동작안될때 Mapper안에 브레이크를 걸거나 할 수없기 때문에 디버깅이 어려워서 간단한 실수로 시간낭비를 하는 케이스가 꽤 있다.
 이럴때 로깅 옵션을 enable해서 보면 도움이 된다.
 
-logback 의 옵션은 아래처럼 mapper의 package name르 아래처럼 적어주면 된다. 아래는 logback의 설정..
+logback 의 옵션은 아래처럼 mapper의 package name르 아래처럼 적어주면 된다.
 
 > <logger name="mapper.package.name" level="DEBUG"/>
