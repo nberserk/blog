@@ -96,8 +96,17 @@ http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/
 
 
 
-# post connection test
+# shell
+
+post connection test
 
 > nc -z -w3 loadtest-sknowledgedb.cls9hmfha9jo.us-west-2.rds.amazonaws.com 3306
 
+# HBase
+
+google의 bigtable논문을 바탕으로 오픈소스로 개발한 DB
+
+row key가 있고, 각 row에는 column family, 각 column family에는 column이 있음. 그래서 채팅 데이터를 기록하는 용도로 많이 사용함.
+
+https://www.tutorialspoint.com/hbase/hbase_overview.htm
 
