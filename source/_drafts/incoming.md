@@ -5,6 +5,48 @@ tags:
 
 https://github.com/fishercoder1534/Leetcode
 
+
+# edge computing
+
+## AWS
+
+https://aws.amazon.com/greengrass/
+
+edge computing pros:
+
+- respone events in real time
+- operate in offline. kind of buffer
+- secure
+- aws lambda
+- cost saving, coz only send needed data to cloud
+
+
+## Azure
+
+https://docs.microsoft.com/en-us/azure/iot-edge/
+
+iot edge runtime
+
+- security(authentication, authorization)
+- loggin
+- monitoring
+- module mgmt
+- communication between sensors, cloud, modules
+
+iot edge edge hub
+
+- same interface with iot hub. so make them switching easy.
+- subset of iot hub functionality. proxy to real iot hub. delegate authentication to iot hub.
+- connect to iot hub as one connection instead of multiple connection from all sensors.
+- module input/output wiring possible
+
+iot edge agent
+
+- install/start module, status audit to iot cloud.
+
+
+
+
 # Youtube
 
 - http://highscalability.com/youtube-architecture
