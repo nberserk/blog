@@ -100,3 +100,6 @@ feed:
 alias:
   default/2017/02/12/angular-form-file.html: 2017/02/12/angular-form-file/
   2015/11/11/segmenttree.html: 2015/11/11/segmenttree/
+
+# plugins:
+# - hexo-renderer-mathjax
