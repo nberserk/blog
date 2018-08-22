@@ -144,6 +144,10 @@ post connection test
 
 > nc -z -w3 loadtest-sknowledgedb.cls9hmfha9jo.us-west-2.rds.amazonaws.com 3306
 
+check listening port 
+
+> netstat -plnt
+
 # HBase
 
 google의 bigtable논문을 바탕으로 오픈소스로 개발한 DB
