@@ -1,6 +1,6 @@
 ---
 title: dockerize angular + spring api
-date: 2018-08-20 17:02:54
+date: 2018-08-28 11:02:54
 tags: 
 - angular
 - docker
