@@ -2,6 +2,7 @@
 title: github workflow
 tags:
   - github
+  - git
 date: 2018-05-30 18:35:41
 ---
 
