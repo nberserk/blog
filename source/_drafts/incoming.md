@@ -5,6 +5,10 @@ tags:
 
 https://github.com/fishercoder1534/Leetcode
 
+- 구글 인터뷰 한번 정독할것.
+
+https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fhackernoon.com%2Fgoogle-interview-questions-deconstructed-the-knights-dialer-f780d516f029
+
 
 # edge computing
 
@@ -43,9 +47,6 @@ iot edge edge hub
 iot edge agent
 
 - install/start module, status audit to iot cloud.
-
-
-
 
 # Youtube
 
@@ -155,6 +156,3 @@ google의 bigtable논문을 바탕으로 오픈소스로 개발한 DB
 row key가 있고, 각 row에는 column family, 각 column family에는 column이 있음. 그래서 채팅 데이터를 기록하는 용도로 많이 사용함.
 
 https://www.tutorialspoint.com/hbase/hbase_overview.htm
-
-# angular + docker + spring 
-
