@@ -9,6 +9,28 @@ https://github.com/fishercoder1534/Leetcode
 
 https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fhackernoon.com%2Fgoogle-interview-questions-deconstructed-the-knights-dialer-f780d516f029
 
+# building & submitting spark application
+
+# loading s3 files on spark 
+
+```scala
+sc.hadoopConfiguration.set("fs.s3a.access.key", "xx")
+sc.hadoopConfiguration.set("fs.s3a.secret.key", "xxx")
+
+val df = spark.read.load("s3a://<bucket_name>/data.parquet")
+df.show()
+// load recursiviely
+val df2 = spark.read.load("s3a://<bucket_name>/2018/*/*/*")
+df2.show()
+```
+
+
+
+# SAM(serverless application model)
+
+> pip install  aws-sam-cli
+
+
 
 # edge computing
 
@@ -113,9 +135,6 @@ http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-w
 - OLTP(Online Transaction Processing) : normalize
 - OLAP(Online Alalytic Processing) : de-normalize
 
-# Knapsack
-
-
 
 # transaction across multiple data centers
 
@@ -149,6 +168,10 @@ check listening port
 
 > netstat -plnt
 
+show process command fully
+
+> ps aux | less
+
 # HBase
 
 google의 bigtable논문을 바탕으로 오픈소스로 개발한 DB
@@ -156,3 +179,4 @@ google의 bigtable논문을 바탕으로 오픈소스로 개발한 DB
 row key가 있고, 각 row에는 column family, 각 column family에는 column이 있음. 그래서 채팅 데이터를 기록하는 용도로 많이 사용함.
 
 https://www.tutorialspoint.com/hbase/hbase_overview.htm
+
