@@ -11,6 +11,10 @@ https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fhackernoon.com%2F
 
 # building & submitting spark application
 
+## spark application template
+
+
+
 # loading s3 files on spark 
 
 ```scala
@@ -23,6 +27,8 @@ df.show()
 val df2 = spark.read.load("s3a://<bucket_name>/2018/*/*/*")
 df2.show()
 ```
+
+
 
 
 
@@ -159,6 +165,9 @@ http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/
 
 
 # shell
+
+sudo with password 
+> echo pwd | sudo -S ls /etc
 
 post connection test
 
