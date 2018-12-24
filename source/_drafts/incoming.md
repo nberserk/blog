@@ -24,7 +24,7 @@ sc.hadoopConfiguration.set("fs.s3a.secret.key", "xxx")
 val df = spark.read.load("s3a://<bucket_name>/data.parquet")
 df.show()
 // load recursiviely
-val df2 = spark.read.load("s3a://<bucket_name>/2018/*/*/*")
+val df2 = spark.read.load("s3a://<bucket_name>/2018/*/*/*", "s3a://<bucket_name>/2017/*/*/*)
 df2.show()
 ```
 
