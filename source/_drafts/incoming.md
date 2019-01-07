@@ -1,7 +1,34 @@
 ---
+title: spark DataFrame
+tags: 
+- spark
+---
+
+spark의 가장 기본이 되는 데이터 타입은 아래 3가지로 요약할 수 있다.
+
+- [RDD](/2018/07/02/spark-rdd)
+- DataFrame
+- DataSet
+
+아래로 내려갈수록 type안정성이 강화된 high level API라고 생각하면 된다.
+
+
+
+
+
+---
 title: incoming
 tags:
 ---
+
+# scala
+
+```scala
+val list = Seq("folder1", "folder2")
+spark.read.load(list: _*)
+```
+
+`_*`의 의미 : vaarg로 만들어주는 것. 
 
 https://github.com/fishercoder1534/Leetcode
 
