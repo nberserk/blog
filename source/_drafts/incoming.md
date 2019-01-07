@@ -38,11 +38,11 @@ https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fhackernoon.com%2F
 
 # building & submitting spark application
 
-## spark application template
+```
+--files 
+```
 
-
-
-# loading s3 files on spark 
+# loading s3 files on spark
 
 ```scala
 sc.hadoopConfiguration.set("fs.s3a.access.key", "xx")

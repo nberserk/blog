@@ -1,5 +1,5 @@
 #!/bin/bash
 
-hexo clean
+#hexo clean
 hexo deploy -g
 
