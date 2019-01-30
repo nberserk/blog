@@ -53,4 +53,6 @@ mybatis 쿼리가 제대로 동작안될때 Mapper안에 브레이크를 걸거�
 
 logback 의 옵션은 아래처럼 mapper의 package name르 아래처럼 적어주면 된다.
 
-> <logger name="mapper.package.name" level="DEBUG"/>
+```xml
+<logger name="mapper.package.name" level="DEBUG"/>
+```

@@ -12,12 +12,8 @@ spark의 가장 기본이 되는 데이터 타입은 아래 3가지로 요약할
 
 아래로 내려갈수록 type안정성이 강화된 high level API라고 생각하면 된다.
 
-
-
-
-
 ---
-title: incoming
+title: scala
 tags:
 ---
 
@@ -29,6 +25,10 @@ spark.read.load(list: _*)
 ```
 
 `_*`의 의미 : vaarg로 만들어주는 것. 
+
+
+# end of scala
+
 
 https://github.com/fishercoder1534/Leetcode
 
