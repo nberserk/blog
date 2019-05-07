@@ -6,7 +6,9 @@ tags:
  - coverage
 ---
 
-My first requirement is generate exact coverage report for public functions of non UI classes. [Jacoco](https://www.eclemma.org/jacoco/) is popular coverage tool for Java worlds. It basically calculates all functions in class path. It has some include/exclude options for class level. but it doesn't cover my requirements entirely. so I want to share my experiences here because I couldn't find any solution for this.
+[Jacoco](https://www.eclemma.org/jacoco/) is popular coverage tool for Java worlds. It provides [various options](https://www.eclemma.org/jacoco/trunk/doc/agent.html) to include or exclude specific classes.
+
+My special requirement is to generate exact coverage report for public functions of non UI classes. Jacoco doesn't support that functionality. so I want to share my experiences here because I couldn't find any solution for this.
 
 The first thing I found was [filters](https://github.com/jacoco/jacoco/wiki/FilteringOptions). If I can implement my own filter, then that's all I need. Let's analyze it more in source code level. After some time, I've found [Filter class](https://github.com/jacoco/jacoco/blob/d3c47652b89267709aae04bec66a68bdf6df9670/org.jacoco.core/src/org/jacoco/core/internal/analysis/filter/Filters.java#L34)! It has all required filters for proper coverage reporting.
 
