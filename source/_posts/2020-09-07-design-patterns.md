@@ -3,7 +3,6 @@ layout: post
 title:  "design patterns"
 tags:
  - CVA
- - i
 ---
 
 interesting topics during design pattern lectures
@@ -14,7 +13,9 @@ interesting topics during design pattern lectures
     public void printReport (String CustomerID) { 
         if(!isValid(CustomerID)) throw new ArgumentException(); 
         Employee[] emps = getEmployees(CustomerID);
-        if(needsSorting(emps)) sortEmployees(emps); printHeader(CustomerID);
+        if(needsSorting(emps)) 
+            sortEmployees(emps); 
+        printHeader(CustomerID);
         printFormattedEmployees(emps);
         printFooter(CustomerID);
     }
@@ -41,10 +42,11 @@ requirements
 - Canadian PST, GST
 - Validation of addresses strcuture in different locations
 
-from this requiremtns you can derive a following  potential entities and abstractions.
+from this requirments you can derive a following  potential entities and abstractions.
 
 
 examle of CVA:
+
 ```
 Country
 ----
