@@ -48,6 +48,7 @@ But this doesn't give us accurate top K lists. if constraints don't allow inaccu
 
 
 ## Reference
+- https://www.youtube.com/watch?v=kx-XDoPjoHw
 - http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html
 
 
