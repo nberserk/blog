@@ -53,9 +53,52 @@ Functions
 - usage data collection
   - billing/ realtime usage
 
+## Metadata service
+- caching layer between frontend and a storage
+- many read, little writes
+- strong consistency storage preferred
 
+![image](https://user-images.githubusercontent.com/900639/123562894-58b7ab00-d766-11eb-825c-a607022ddf6f.png)
 
+## backend service
 
+- where and how do we store message? -> RAM and local disk
+- how do we replicate data?
+- how does FrontEnd select a backend host to send data to? Metadata service
+- how does frontend know where to retrive data from? Metadata service
+
+### Option A: Leader-follower relationshiop
+![image](https://user-images.githubusercontent.com/900639/123564263-9cfa7980-d76d-11eb-93f6-cae05e3e7262.png)
+
+### OPtion B:
+![image](https://user-images.githubusercontent.com/900639/123564280-b3083a00-d76d-11eb-9ede-73dc47643b62.png)
+
+comparions OPtion A/B :
+
+|  | in-cluster manager | out-cluster manager  |  |  |
+|-|-|-|-|-|
+|  | manages queue assignment within the cluster  | managers queue assignment among clusters  |  |  |
+|  | maintains a list of hosts in the cluster | maintains a list of cluters|  |  |
+|  | monitors heartbeats from hosts | monitos each cluster health |  |  |
+| | deals with leader and follower failures | deals with overheated clusters | |
+| | split queue between cluster nodes(partitioning)| splits queue between clusters | |
+
+## What else is important
+- Queue creation and deletion
+- message deletion
+ - do not delete message. it can be deleted by batch job
+ - consumer needs to call deleteMessae
+- message replication
+ -  async replication: low latency. how to sync when one host is down?
+ -  sync replication: high latency. hit consistency
+ -  hard to achieve `exactly once delivery`
+-  push vs pull
+-  FIFO. doesn't guarantee the strict order of the message
+-  security: encrypte messages
+-  monitoring
+
+## final look
+![image](https://user-images.githubusercontent.com/900639/123564724-5279fc80-d76f-11eb-8a57-129d319cb3ae.png)
 
 
 ## DB selection
